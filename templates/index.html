@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}Search Products{% endblock %}
+
+{% block body %}
+<nav class="navbar custom-navbar">
+  <div class="navbar-inner">
+    <!-- Brand -->
+    <a class="navbar-logo-text" href="{{ url_for('index') }}">
+      Myntra Reviews Scraper
+    </a>
+
+    <!-- Actions -->
+    <div class="navbar-actions">
+      <button class="btn-primary">Contact</button>
+    </div>
+  </div>
+</nav>
+<div class="page-container">
+  <div class="content-wrapper animate__animated animate__fadeIn text-center">
+
+   <div class="header-section">
+
+  <img src="{{ url_for('static', filename='images/myntra.webp') }}" 
+       alt="Myntra Logo" class="app-logo">
+
+    <h1 class="page-heading">Scrape Product Reviews.</h1>
+</div>
+
+    <!-- Search Form -->
+    <form action="/review" method="POST" class="form-card">
+      <div class="form-field">
+        <input type="text" class="input-field" 
+               placeholder="Search for a product" 
+               name="content" id="content" required>
+      </div>
+      <div class="form-field">
+        <input type="number" class="input-field" 
+               placeholder="Number of products to scrape" 
+               name="prod_no" id="prod_no" min="1" required>
+      </div>
+      <button class="btn-primary btn-full" type="submit"> Search</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

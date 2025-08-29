@@ -1,0 +1,328 @@
+/* =====================
+   Base & Layout
+===================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(
+    135deg,
+    #fff6f0 0%,
+    #ffeef7 20%,
+    #f6f3ff 40%,
+    #eef9ff 60%,
+    #fffbee 80%,
+    #fdfaff 100%
+  );
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  color: #00132C;
+}
+
+.page-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-wrapper {
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* =====================
+   Navbar
+===================== */
+.custom-navbar {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid #266DB6;
+  padding: 0.8rem 1rem;
+  box-shadow: 4px 4px 0 rgba(38, 109, 182, 0.25);
+  z-index: 999;
+}
+
+.navbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo-text {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #00132C;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.navbar-logo-text:hover {
+  color: #266DB6;
+  cursor: pointer;
+}
+
+/* Right-side actions */
+.navbar-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* =====================
+   Header Section (Logo + Title)
+===================== */
+.header-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;        /* spacing between logo and title */
+  margin-bottom: 2rem; /* space below before the form */
+}
+
+/* =====================
+   Hero Logo
+===================== */
+.app-logo {
+  max-height: 120px;
+  margin-bottom: 1rem;
+  filter: drop-shadow(4px 4px 0 rgba(38,109,182,0.25));
+}
+
+/* =====================
+   Headings
+===================== */
+.page-heading {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #00132C;
+  margin-bottom: 4rem;
+  border: 2px solid transparent;
+  padding: 6px 14px;
+  display: inline-block;
+  box-shadow: 4px 4px 0 rgba(38, 109, 182, 0.15);
+  transition: all 0.3s ease;
+}
+
+.page-heading:hover {
+  border-color: #266DB6;
+  background: #D5EDF6;
+  cursor: pointer;
+}
+
+/* =====================
+   Form Card
+===================== */
+.form-card {
+  background: white;
+  border: 2px solid #266DB6;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;   /* stack elements vertically */
+  box-shadow: 6px 6px 0 rgba(38, 109, 182, 0.25);
+  transition: all 0.1s ease;
+}
+
+.input-field,
+.btn-primary {
+  box-sizing: border-box;   /* includes padding/border */
+  font-size: 1rem;
+  padding: 14px;
+}
+
+.btn-primary {
+  text-align: center;
+  font-weight: 600;
+}
+
+.form-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 0 rgba(38, 109, 182, 0.35);
+}
+
+.form-field {
+  margin-bottom: 1rem;
+}
+
+/* =====================
+   Inputs
+===================== */
+.input-field {
+  border: 2px solid #266DB6;
+  border-radius: 8px;
+  padding: 12px;
+  width: 100%;
+  box-shadow: 3px 3px 0 rgba(38, 109, 182, 0.15);
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #6DCFF6;
+  background-color: #F0FAFF;
+  box-shadow: 5px 5px 0 rgba(109, 207, 246, 0.35);
+}
+
+/* =====================
+   Buttons
+===================== */
+.btn-primary {
+  border-radius: 5px;
+  background-color: transparent;
+  border: 2px solid #266DB6;
+  color: #00132C;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 12px 22px;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 4px 4px 0 rgba(38, 109, 182, 0.25);
+}
+
+.btn-primary:hover {
+  background-color: #D5EDF6;
+  cursor: pointer;
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 rgba(38, 109, 182, 0.35);
+}
+
+.btn-primary:active {
+  transform: translate(0, 0);
+  box-shadow: 2px 2px 0 rgba(38, 109, 182, 0.25);
+}
+
+
+.btn-full {
+  width: 100%;
+  display: block;
+  margin-top: 1rem;
+}
+
+/* =====================
+   Tables
+===================== */
+.table-custom {
+  border: 2px solid #266DB6;
+  border-radius: 8px;
+  box-shadow: 5px 5px 0 rgba(38, 109, 182, 0.2);
+  overflow: hidden;
+}
+
+.table-custom th {
+  background-color: #D5EDF6;
+  color: #00132C;
+  font-weight: 600;
+  border: 1px solid #266DB6;
+}
+
+.table-custom td {
+  border: 1px solid #266DB6;
+  padding: 10px;
+  text-align: center;
+}
+
+.table-custom tr:hover {
+  background-color: #F0FAFF;
+  cursor: pointer;
+}
+
+/* =====================
+   Footer
+===================== */
+.custom-footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #555;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+
+/* Results Table */
+.table {
+  width: 100%;    
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  font-size: 0.95rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.table thead th {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  padding: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.table tbody td {
+  padding: 10px 14px;
+  vertical-align: middle;
+  word-wrap: break-word;
+  max-width: 280px; /* prevents text from stretching too wide */
+}
+
+.table-responsive {
+  max-height: 70vh; /* dynamic scrolling */
+  overflow-y: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Zebra striping for better readability */
+.table tbody tr:nth-child(odd) {
+  background-color: #fafafa;
+}
+.table tbody tr:nth-child(even) {
+  background-color: #fff;
+}
+
+/* Add subtle animation */
+.fade-row {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.btn-success {
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid #266DB6;
+    color: #00132C;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 12px 22px;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 4px 4px 0 rgba(38, 109, 182, 0.25);
+}
+.btn-success:hover {
+  background-color: #D5EDF6;
+  cursor: pointer;
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 rgba(38, 109, 182, 0.35);
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts + Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <title>{% block title %}Myntra Search{% endblock %}</title>
+  {% block head %}{% endblock %}
+</head>
+<body>
+
+  {% block body %}{% endblock %}
+
+  <footer class="custom-footer">
+    Myntra Review Scraper | Built by Rajeev Joshi | Works on Chrome Web Driver |
+  </footer>
+
+</body>
+</html>

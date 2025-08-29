@@ -15,7 +15,7 @@ class ScrapeReviews:
         options = Options()
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-dev-shm-usage")
-        # options.add_argument("--headless")   # only for server; locally you can comment it if you want UI
+        # options.add_argument("--headless")   # only for server; locally for UI
 
        
         self.driver = webdriver.Chrome(options=options)  # Start a new Chrome browser session
